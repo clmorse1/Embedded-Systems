@@ -33,12 +33,14 @@ int main()
 
     // This is a variable (not an oject as it has no functions) that stores a whole number (integer) in memory
     // (I used the keyword volatile to force it to use memory... long story and one for later)
-    volatile int counter = 0;
+    volatile int counter = 10;
 
-    while (true)
+    while (counter<15)
     {
         //Toggle the LED
         ledBlue = !ledBlue;
+        ledRed = !ledRed;
+        ledGreen = !ledGreen;
 
         //Add 1 to the counter "variable"
         counter = counter + 1;
